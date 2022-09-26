@@ -1,0 +1,70 @@
+<ion-header [translucent]="true" class="center">
+  <ion-toolbar color="medium">
+    <ion-title class="fonte">Calculadora</ion-title>
+
+      <ion-button class="botaoc" color="dark" slot="end" (click)="limpar()">C </ion-button>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="dark">
+
+  <ion-item color="dark">
+    <ion-label position="fixed">Valor 1: </ion-label>
+    <ion-input  type="number" [(ngModel)]="primeiroValor"></ion-input>
+  </ion-item>
+
+  <ion-item color="dark">
+    <ion-label position="fixed">Valor 2: </ion-label>
+    <ion-input type="number" [(ngModel)]="segundoValor"></ion-input>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row>
+
+
+      <ion-col size="3">
+        <ion-button color="tertiary" expand="block" (click)="somar()" (click)="mostrarAlert()"> + </ion-button>
+      </ion-col>
+
+      <ion-col size="3">
+        <ion-button color="tertiary" expand="block"  (click)="subtrair()" (click)="mostrarAlert()" > - </ion-button>
+      </ion-col>
+
+      <ion-col size="3">
+        <ion-button color="tertiary" expand="block" (click)="multiplicacao()" (click)="mostrarAlert()" > x </ion-button>
+      </ion-col>
+
+      <ion-col size="3">
+        <ion-button color="tertiary" expand="block"  (click)="divisao()" (click)="mostrarAlert()" > ÷ </ion-button>
+      </ion-col>
+
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col size="6">
+        <ion-button color="tertiary" expand="block"  (click)="mostrarMaior()" > Maior </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button color="tertiary" expand="block"  (click)="mostrarMenor()" > Menor </ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-item color="dark">
+    <ion-label position="fixed">Resultado: </ion-label>
+    <ion-input [readonly]="true" [(ngModel)] ="resultado"></ion-input>
+  </ion-item>
+
+  <ion-item color="dark">
+    <ion-label position="fixed">Conta: </ion-label>
+    <ion-input [readonly]="true" [(ngModel)] ="conta" > </ion-input>
+  </ion-item>
+
+
+
+
+
+</ion-content>
